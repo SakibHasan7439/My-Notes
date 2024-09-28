@@ -58,7 +58,7 @@
         <div class="ml-3 col-span-2">
             <ul id="section-list">
                 <li class="mb-3">
-                    <button class="btn rounded-full px-[15px] bg-orange-100">
+                    <button id="main-section" class="btn rounded-full px-[15px] bg-orange-100">
                         <i class="fa-regular text-xl fa-lightbulb"></i>
                     </button>
                 </li>
@@ -81,23 +81,24 @@
                     archive
                 </li>
                 <li>
-                    <button class="rounded-full px-[15px]">
+                    <button id="history" class="rounded-full px-[15px]">
                         <i class="fa-solid text-xl fa-trash"></i>
                     </button>
                     Delete
                 </li>
             </ul>
         </div>
-        <div class="col-span-10 my-6">
+        <div id="parent" class="col-span-10 my-6">
             <div class="w-[600px] mx-auto">
                 <textarea placeholder="Take Note" class="rounded-md py-2 px-4 w-full border-2 shadow-md outline-none" type="text" name="takeNote" id="takeNote">
                 </textarea>
             </div>
-            <button id="button">add note</button>
             <div id="note-container" class="grid grid-cols-5 gap-3">
 
             </div>
         </div>
+
+        <div id="deleteNotes" class="hidden col-span-3 gap-3"></div>
     </main>
 
     <script src="js/index.js"></script>
