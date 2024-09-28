@@ -9,10 +9,11 @@
     <!-- tailwind & daisy ui cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <title>My Notes</title>
 </head>
 <body>
-    <header class=" bg-opacity-50 sticky bg-white left-0 right-0 top-0 border-b-2">
+    <header class="mb-4 bg-opacity-50 sticky bg-white left-0 right-0 top-0 border-b-2">
       <div class="navbar">
         <div class="navbar-start">
             <div class="dropdown">
@@ -53,8 +54,52 @@
       </div>
     </header>
 
-    <main class="max-w-[1200px] mx-auto">
+    <main class="grid grid-cols-12">
+        <div class="ml-3 col-span-2">
+            <ul id="section-list">
+                <li class="mb-3">
+                    <button class="btn rounded-full px-[15px] bg-orange-100">
+                        <i class="fa-regular text-xl fa-lightbulb"></i>
+                    </button>
+                </li>
+                <li class="mb-3">
+                    <button class="rounded-full px-[15px]">
+                        <i class="fa-regular text-xl fa-bell"></i>
+                    </button>
+                    Note
+                </li>
+                <li class="mb-3">
+                    <button class="rounded-full px-[15px]">
+                        <i class="fa-solid text-xl fa-pen"></i>
+                        Reminder
+                    </button>
+                </li>
+                <li class="mb-3">
+                    <button class="rounded-full px-[15px]">
+                        <i class="fa-solid text-xl fa-file-arrow-down"></i>
+                    </button>
+                    archive
+                </li>
+                <li>
+                    <button class="rounded-full px-[15px]">
+                        <i class="fa-solid text-xl fa-trash"></i>
+                    </button>
+                    Delete
+                </li>
+            </ul>
+        </div>
+        <div class="col-span-10 my-6">
+            <div class="w-[600px] mx-auto">
+                <textarea placeholder="Take Note" class="rounded-md py-2 px-4 w-full border-2 shadow-md outline-none" type="text" name="takeNote" id="takeNote">
+                </textarea>
+            </div>
+            <button id="button">add note</button>
+            <div id="note-container" class="grid grid-cols-5 gap-3">
 
+            </div>
+        </div>
     </main>
+
+    <script src="js/index.js"></script>
 </body>
 </html>
